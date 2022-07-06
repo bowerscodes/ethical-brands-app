@@ -1,10 +1,12 @@
 import React from "react";
 import "./app.css";
+// import { Route, Routes } from "react-router-dom";
+import Search from "./components/Search";
 
 const App = () => {
   return (
-    <div className="app">
-      <h2 className="title">Ethical Brands</h2>
+    <div>
+      <Search />
     </div>
   );
 };
