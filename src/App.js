@@ -1,12 +1,10 @@
-import './app.css';
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import "./app.css";
 
 const App = () => {
   return (
     <div className="app">
-      
+      <h2 className="title">Ethical Brands</h2>
     </div>
   );
 };
