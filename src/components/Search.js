@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/search.css";
-// import { Link } from "react-router-dom"
 
 const Search = () => {
   return (
@@ -13,7 +13,7 @@ const Search = () => {
           placeholder="Search brand"
         />
         <button type="submit" className="search-button">
-          Search
+          <Link to="/search-results">Search</Link>
         </button>
       </form>
     </div>
