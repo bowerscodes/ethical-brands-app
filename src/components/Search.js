@@ -7,14 +7,14 @@ const Search = () => {
     <div className="search-component">
       <h2 className="search-title">Ethical Brands</h2>
       <form className="search-form">
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Search brand"
-        />
-        <button type="submit" className="search-button">
-          <Link to="/search-results">Search</Link>
-        </button>
+        <div>
+          <input type="text" className="search-input" />
+        </div>
+        <div>
+          <button type="submit" className="search-button">
+            <Link to="/search-results">SEARCH</Link>
+          </button>
+        </div>
       </form>
     </div>
   );

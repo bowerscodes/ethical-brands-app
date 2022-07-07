@@ -5,7 +5,7 @@ const SearchResult = () => {
   return (
     <div>
       <button type="submit">
-        <Link to="/">Back button</Link>
+        <Link to="/">BACK</Link>
       </button>
       <h2>Search Results</h2>
     </div>
