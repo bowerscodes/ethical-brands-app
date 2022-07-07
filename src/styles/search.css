@@ -1,3 +1,34 @@
 .search-component {
+    box-sizing: border-box;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-title {
+
+}
+
+.search-input, .search-button {
+    box-sizing: border-box;
+    margin: 4px;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+    outline: 2px solid rgb(162, 177, 129);
+}
+.search-button {
+    background-color: rgb(172, 185, 143);
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
 }
