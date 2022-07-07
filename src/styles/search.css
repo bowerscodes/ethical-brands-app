@@ -27,8 +27,11 @@
 .search-button {
     background-color: rgb(172, 185, 143);
 }
+
 a {
     color: white;
     text-decoration: none;
     font-weight: 400;
+} a:visited {
+    color: white;
 }
