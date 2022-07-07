@@ -9,6 +9,12 @@
     margin-right: auto;
 }
 
+.search-title {
+    height: 30vh;
+    bottom: 0;
+    background-image: url('../assets/header_jungle.jpeg');
+}
+
 .search-input, .search-button {
     box-sizing: border-box;
     margin: 4px;
