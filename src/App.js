@@ -1,12 +1,16 @@
 import React from "react";
-import "./app.css";
-// import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Search from "./components/Search";
+import SearchResult from "./components/SearchResult";
 
 const App = () => {
   return (
     <div>
-      <Search />
+      <Routes>
+        <Route exact path="/" element={<Search />} />
+        <Route exact path="/search-results" element={<SearchResult />} />
+      </Routes>
     </div>
   );
 };

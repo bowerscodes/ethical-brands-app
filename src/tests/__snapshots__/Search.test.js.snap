@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search snapshot test 1`] = `
+<DocumentFragment>
+  <div
+    class="search-component"
+  >
+    <h2
+      class="search-title"
+    >
+      Ethical Brands
+    </h2>
+    <form
+      class="search-form"
+    >
+      <div>
+        <input
+          class="search-input"
+          type="text"
+        />
+      </div>
+      <div>
+        <button
+          class="search-button"
+          type="submit"
+        >
+          <a
+            href="/search-results"
+          >
+            SEARCH
+          </a>
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
