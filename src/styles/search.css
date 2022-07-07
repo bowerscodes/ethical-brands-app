@@ -12,12 +12,7 @@
 .search-title {
     height: 30vh;
     bottom: 0;
-    background-image: url('./assets/header_jungle.jpeg');
-}
-
-.search-form {
-    box-sizing: border-box;
-    width: 100%;
+    background-image: url('../assets/header_jungle.jpeg');
 }
 
 .search-input, .search-button {
