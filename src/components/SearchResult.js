@@ -15,13 +15,24 @@ const SearchResult = () => {
       </Link>
       <div className="search-results_content">
         <h3>Company Logo</h3>
-        <InfoCard
-          name={brand.brands[0].name}
-          revenue={brand.brands[0].revenue}
-          ownership={JSON.stringify(brand.brands[0].ownership)}
-        />
-        <InfoCard animals={JSON.stringify(brand.brands[0].animals)} />
-        <InfoCard environment={JSON.stringify(brand.brands[0].environment)} />
+        {brand.brands.map((value) => (
+          <InfoCard
+            name={value.name}
+            category={value.category}
+            revenue={value.revenue}
+            ownership={value.ownership.owner}
+            anTesting={value.animals.testing} // Booleans in json may need to be string
+            anInfo={value.animals.info}
+            envScore={value.environment.score}
+            envInfo={value.environment.info}
+            labScore={value.labour.score}
+            labInfo={value.labour.info}
+            philDonate={value.philanthropy.donations}
+            philInfo={value.philanthropy.info}
+            // news={JSON.stringify(value.news)}
+            totalScore={value.totalScore}
+          />
+        ))}
       </div>
     </div>
   );
