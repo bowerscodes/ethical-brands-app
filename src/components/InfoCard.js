@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import "../styles/infocard.css";
 
 const InfoCard = (props) => {
   const {
@@ -19,23 +20,26 @@ const InfoCard = (props) => {
   } = props;
   return (
     <>
-      <div className="info-card_company">
+      <div className="info">
         <div>{`${name}, ${category}`}</div>
         <div>Revenue: {revenue}</div>
         <div>{ownership}</div>
       </div>
-      <div className="info-card_animal">
+      <div className="info-card">
         <div>Animal Testing: {anTesting}</div>
         <div>{anInfo}</div>
       </div>
-      <div className="info-card_environment">
+      <div className="info-card">
         <div>Environment: {`${envScore}, ${envInfo}`}</div>
       </div>
-      <div className="info-card_labour">
+      <div className="info-card">
         <div>Labour: {`${labScore}, ${labInfo}`}</div>
       </div>
-      <div className="info-card_philathropy">
+      <div className="info-card">
         <div>Philanthropy: {`${philDonate}, ${philInfo}`}</div>
+      </div>
+      <div className="info-card">
+        <p>NEWS</p>
       </div>
       <div>Score: {totalScore}</div>
     </>
