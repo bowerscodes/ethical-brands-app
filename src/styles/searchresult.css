@@ -1,0 +1,23 @@
+.search-results_button {
+    border: none;
+    background-color: #434343;
+    color: white;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50px;
+}
+
+.search-results_arrow {
+    font-size: 35px;
+    padding-right: 3px;
+    color: #F6F5F5;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-results_content {
+    text-align: center;
+}
