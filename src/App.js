@@ -1,5 +1,5 @@
 import React from "react";
-import "./app.css";
+import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
