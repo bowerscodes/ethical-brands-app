@@ -1,0 +1,114 @@
+{
+    "brands": [
+   {
+    "name": "The North Face",
+    "revenue": 5000000,
+    "ownership": {
+      "owner": "VF Corporation Inc",
+      "info": "100% owned by VF Corporation Inc"
+    },
+    "animals": {
+      "testing": false,
+      "score": 4,
+      "info": "Primary Animal Derived Materials used by the company are leather, wool and down. VF Corporation policies prohibit their companies mulesing during wool production. All down and feathers come from Responsible Down Standard suppliers. Committed to achieving 100% responsible down, cruelty free and sustainable. PETA approved",
+      "sources": [
+        "https://s3.amazonaws.com/content.stockpr.com/vfcsustainability/files/pages/resources/policies-standards/ADM+Policy.pdf"
+      ]
+    },
+    "environment": {
+      "co2": "18,405 MT",
+      "pledges": "Remove single-use packaging by 2025 and an absolute reduction of Scope 1 and 2 greenhouse gas emissions of 55% by 2030",
+      "score": 4,
+      "info": "The company was not found to be involved with any particular environment damaging projects"
+    },
+    "labour": {
+      "forcedLabour": true,
+      "score": 2,
+      "info": "There is an active boycott called against The North Face as it allegedly directly or indirectly benefits from the use of Uyghur workers outside Xinjiang through potentially abusive labour transfer programs"
+    },
+    "philanthropy": {
+      "donations": 250000,
+      "info": "Donations made to the UN's Refugee Agency (UNHCR), which is dedicating to protecting rights and building a better future for refugees. Also donated The North Face products to Ukrainian refugees on the ground in Poland."
+    },
+    "news": [
+      {
+        "headline": "Why The North Face challenged Strava users to get out and run",
+        "source": "https://www.thedrum.com/news/2022/06/20/why-the-north-face-challenged-strava-users-get-out-and-run"
+      },
+      {
+        "headline": "The North Face reveals this year's pride collection",
+        "source": "https://www.hungertv.com/editorial/the-north-face-reveals-this-years-pride-collection/"
+      },
+      {
+        "headline": "The North Face Joins Archive Resale Circular Initiative",
+        "source": "https://biomarketinsights.com/the-north-face-joins-archive-resale-circular-initiative/"
+      }
+    ],
+    "certificates": ["Bluesign System Partner", "Resbonsible Down Standard"],
+    "totalScore": 65,
+    "extraInfo": "N/A",
+    "sources": [
+      "https://s3.amazonaws.com/content.stockpr.com/vfcsustainability/files/pages/resources/policies-standards/ADM+Policy.pdf",
+      "https://www.saveuighur.org/these-brands-are-still-linked-to-uyghur-forced-labor-help-stop-them-now/",
+      "https://d1io3yog0oux5.cloudfront.net/vfc/files/documents/Sustainability/Resources/VF_FY2020_Made_for_Change_Report_FINAL.pdf",
+      "https://www.thenorthface.co.uk/about-us/explore-fund.html"
+    ],
+    "category": "clothing"
+  },
+  {
+    "name": "The Coca-Cola Company",
+    "revenue": 175000000,
+    "ownership": {
+      "owner": "VF Corporation Inc",
+      "info": "100% owned by VF Corporation Inc"
+    },
+    "animals": {
+      "testing": false,
+      "score": 4,
+      "info": "Primary Animal Derived Materials used by the company are leather, wool and down. VF Corporation policies prohibit their companies mulesing during wool production. All down and feathers come from Responsible Down Standard suppliers. Committed to achieving 100% responsible down, cruelty free and sustainable. PETA approved",
+      "sources": [
+        "https://s3.amazonaws.com/content.stockpr.com/vfcsustainability/files/pages/resources/policies-standards/ADM+Policy.pdf"
+      ]
+    },
+    "environment": {
+      "co2": "18,405 MT",
+      "pledges": "Remove single-use packaging by 2025 and an absolute reduction of Scope 1 and 2 greenhouse gas emissions of 55% by 2030",
+      "score": 4,
+      "info": "The company was not found to be involved with any particular environment damaging projects"
+    },
+    "labour": {
+      "forcedLabour": true,
+      "score": 2,
+      "info": "There is an active boycott called against The North Face as it allegedly directly or indirectly benefits from the use of Uyghur workers outside Xinjiang through potentially abusive labour transfer programs"
+    },
+    "philanthropy": {
+      "donations": 250000,
+      "info": "Donations made to the UN's Refugee Agency (UNHCR), which is dedicating to protecting rights and building a better future for refugees. Also donated The North Face products to Ukrainian refugees on the ground in Poland."
+    },
+    "news": [
+      {
+        "headline": "Why The North Face challenged Strava users to get out and run",
+        "source": "https://www.thedrum.com/news/2022/06/20/why-the-north-face-challenged-strava-users-get-out-and-run"
+      },
+      {
+        "headline": "The North Face reveals this year's pride collection",
+        "source": "https://www.hungertv.com/editorial/the-north-face-reveals-this-years-pride-collection/"
+      },
+      {
+        "headline": "The North Face Joins Archive Resale Circular Initiative",
+        "source": "https://biomarketinsights.com/the-north-face-joins-archive-resale-circular-initiative/"
+      }
+    ],
+    "certificates": ["Bluesign System Partner", "Resbonsible Down Standard"],
+    "totalScore": 50,
+    "extraInfo": "N/A",
+    "sources": [
+      "https://s3.amazonaws.com/content.stockpr.com/vfcsustainability/files/pages/resources/policies-standards/ADM+Policy.pdf",
+      "https://www.saveuighur.org/these-brands-are-still-linked-to-uyghur-forced-labor-help-stop-them-now/",
+      "https://d1io3yog0oux5.cloudfront.net/vfc/files/documents/Sustainability/Resources/VF_FY2020_Made_for_Change_Report_FINAL.pdf",
+      "https://www.thenorthface.co.uk/about-us/explore-fund.html"
+    ],
+    "category": "drinks"
+  }
+]
+}
