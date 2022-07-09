@@ -6,6 +6,10 @@ import InfoCard from "./InfoCard";
 import brand from "../data/brands.json";
 
 const SearchResult = () => {
+  const brandFilter = brand.brands.filter(
+    (val) => val.name === "The North Face"
+  );
+
   return (
     <div className="search-results">
       <Link to="/">
@@ -15,7 +19,7 @@ const SearchResult = () => {
       </Link>
       <div className="search-results_content">
         <h3>Company Logo</h3>
-        {brand.brands.map((value) => (
+        {brandFilter.map((value) => (
           <InfoCard
             name={value.name}
             category={value.category}
