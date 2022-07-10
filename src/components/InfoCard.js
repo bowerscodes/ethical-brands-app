@@ -16,6 +16,7 @@ const InfoCard = (props) => {
     labInfo,
     philDonate,
     philInfo,
+    news,
     totalScore,
   } = props;
   return (
@@ -39,7 +40,7 @@ const InfoCard = (props) => {
         <div>Philanthropy: {`${philDonate}, ${philInfo}`}</div>
       </div>
       <div className="info-card">
-        <p>NEWS</p>
+        <a href={news[0].source}>{news[0].headline}</a>
       </div>
       <div>Score: {totalScore}</div>
     </>

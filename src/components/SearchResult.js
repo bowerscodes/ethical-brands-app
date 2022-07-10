@@ -7,7 +7,7 @@ import brand from "../data/brands.json";
 
 const SearchResult = () => {
   const brandFilter = brand.brands.filter(
-    (val) => val.name === "The North Face"
+    (val) => val.name === "The Coca-Cola Company"
   );
 
   return (
@@ -33,7 +33,7 @@ const SearchResult = () => {
             labInfo={value.labour.info}
             philDonate={value.philanthropy.donations}
             philInfo={value.philanthropy.info}
-            // news={JSON.stringify(value.news)}
+            news={value.news} // news={JSON.stringify(value.news)}
             totalScore={value.totalScore}
           />
         ))}
