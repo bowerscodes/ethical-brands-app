@@ -1,27 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import axios from "axios";
 import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
+import getByName from "./requests/getByName";
 
-const getData = async () => {
-  try {
-    await axios.get("http://localhost:3000/brands").then((res) => {
-      console.log(res.data);
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-getData();
+getByName();
 
 const App = () => {
+  const [searchText, setSearchText] = useState("");
+
+  const handleBrand = (event) => {
+    event.preventDefault();
+    getByName(searchText);
+  };
+
   return (
     <div>
       <Routes>
-        <Route exact path="/" element={<Search />} />
+        <Route
+          exact
+          path="/"
+          element={
+            <Search
+              searchText={searchText}
+              setSearchText={setSearchText}
+              onSubmit={handleBrand}
+            />
+          }
+        />
         <Route exact path="/search-results" element={<SearchResult />} />
       </Routes>
     </div>
