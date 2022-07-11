@@ -1,15 +1,28 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/searchresult.css";
+import "../styles/infocard.css";
 import { FaAngleLeft } from "react-icons/fa";
-import InfoCard from "./InfoCard";
-import brand from "../data/brands.json";
 
-const SearchResult = () => {
-  const brandFilter = brand.brands.filter(
-    (val) => val.name === "The North Face"
-  );
-
+// eslint-disable-next-line react/prop-types
+const SearchResult = ({
+  name,
+  category,
+  ownership,
+  revenue,
+  anTesting,
+  anInfo,
+  envScore,
+  envInfo,
+  labScore,
+  labInfo,
+  philDonate,
+  philInfo,
+  newsSource,
+  newsHeadline,
+  totalScore,
+}) => {
   return (
     <div className="search-results">
       <Link to="/">
@@ -19,24 +32,27 @@ const SearchResult = () => {
       </Link>
       <div className="search-results_content">
         <h3>Company Logo</h3>
-        {brandFilter.map((value) => (
-          <InfoCard
-            name={value.name}
-            category={value.category}
-            revenue={value.revenue}
-            ownership={value.ownership.owner}
-            anTesting={value.animals.testing} // Booleans in json may need to be string
-            anInfo={value.animals.info}
-            envScore={value.environment.score}
-            envInfo={value.environment.info}
-            labScore={value.labour.score}
-            labInfo={value.labour.info}
-            philDonate={value.philanthropy.donations}
-            philInfo={value.philanthropy.info}
-            news={value.news}
-            totalScore={value.totalScore}
-          />
-        ))}
+        <div className="info">
+          <div>{`${name}, ${category}`}</div>
+          <div>Revenue: {revenue}</div>
+          <div>{ownership}</div>
+        </div>
+        <div className="info-card">
+          <div>Animal Testing: {`${anTesting}, ${anInfo}`}</div>
+        </div>
+        <div className="info-card">
+          <div>Environment: {`${envInfo}, ${envScore}`}</div>
+        </div>
+        <div className="info-card">
+          <div>Labour: {`${labInfo}, ${labScore}`}</div>
+        </div>
+        <div className="info-card">
+          <div>Philanthropy: {`${philInfo}, ${philDonate}`}</div>
+        </div>
+        <div className="info-card">
+          <a href={newsSource}>News: {newsHeadline}</a>
+        </div>
+        <div>Score: {totalScore}</div>
       </div>
     </div>
   );
