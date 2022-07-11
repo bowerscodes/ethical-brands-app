@@ -21,3 +21,10 @@
 .search-results_content {
     text-align: center;
 }
+
+.search-results_logo {
+    max-width: 175px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+}

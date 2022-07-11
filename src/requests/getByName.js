@@ -2,6 +2,7 @@ import axios from "axios";
 
 const getByName = async (
   searchText,
+  setLogo,
   setName,
   setCategory,
   setOwnership,
@@ -27,6 +28,7 @@ const getByName = async (
   try {
     await axios.get(endpoint).then((res) => {
       console.log(res.data);
+      setLogo(res.data.logo);
       setName(res.data.name);
       setCategory(res.data.category);
       setRevenue(res.data.revenue);

@@ -7,6 +7,7 @@ import { FaAngleLeft } from "react-icons/fa";
 
 // eslint-disable-next-line react/prop-types
 const SearchResult = ({
+  logo,
   name,
   category,
   ownership,
@@ -31,7 +32,7 @@ const SearchResult = ({
         </button>
       </Link>
       <div className="search-results_content">
-        <h3>Company Logo</h3>
+        <img src={`${logo}`} alt="brand logo" className="search-results_logo" />
         <div className="info">
           <div>{`${name}, ${category}`}</div>
           <div>Revenue: {revenue}</div>
