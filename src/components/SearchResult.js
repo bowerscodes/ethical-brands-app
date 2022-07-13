@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/searchresult.css";
-import "../styles/infocard.css";
 import { FaAngleLeft } from "react-icons/fa";
 
 // eslint-disable-next-line react/prop-types
@@ -51,7 +50,9 @@ const SearchResult = ({
           <div>Philanthropy: {`${philInfo}, ${philDonate}`}</div>
         </div>
         <div className="info-card">
-          <a href={newsSource}>News: {newsHeadline}</a>
+          <a href={newsSource} target="_blank" rel="noreferrer">
+            News: {newsHeadline}
+          </a>
         </div>
         <div>Score: {totalScore}</div>
       </div>
