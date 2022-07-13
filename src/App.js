@@ -1,47 +1,43 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
 import getByName from "./requests/getByName";
 
 const App = () => {
+  const initialState = {
+    logo: "",
+    name: "",
+    ownership: "",
+    revenue: "",
+    anTesting: "",
+    anInfo: "",
+    envScore: 0,
+    envInfo: "",
+    labScore: 0,
+    labInfo: "",
+    philDonate: "",
+    philInfo: "",
+    newsSource: "",
+    newsHeadline: "",
+    totalScore: 0,
+  };
   const [searchText, setSearchText] = useState("");
-  const [name, setName] = useState("");
-  const [category, setCategory] = useState("");
-  const [ownership, setOwnership] = useState("");
-  const [revenue, setRevenue] = useState("");
-  const [anTesting, setAnTesting] = useState("");
-  const [anInfo, setAnInfo] = useState("");
-  const [envScore, setEnvScore] = useState("");
-  const [envInfo, setEnvInfo] = useState("");
-  const [labScore, setLabScore] = useState("");
-  const [labInfo, setLabInfo] = useState("");
-  const [philDonate, setPhilDonate] = useState("");
-  const [philInfo, setPhilInfo] = useState("");
-  const [newsSource, setNewsSource] = useState("");
-  const [newsHeadline, setNewsHeadline] = useState("");
-  const [totalScore, setTotalScore] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [results, setResults] = useState(initialState);
+
+  const navigate = useNavigate();
 
   const handleBrandSearch = () => {
-    getByName(
-      searchText,
-      setName,
-      setCategory,
-      setOwnership,
-      setRevenue,
-      setAnTesting,
-      setAnInfo,
-      setEnvScore,
-      setEnvInfo,
-      setLabScore,
-      setLabInfo,
-      setPhilDonate,
-      setPhilInfo,
-      setNewsSource,
-      setNewsHeadline,
-      setTotalScore
-    );
+    if (!searchText) {
+      setErrorMessage("Error, please enter a brand"); // If no text is entered
+    } else {
+      getByName(searchText, setResults, setErrorMessage);
+      if (!errorMessage) {
+        navigate("/search-results");
+      }
+    }
   };
 
   return (
@@ -63,26 +59,28 @@ const App = () => {
           path="/search-results"
           element={
             <SearchResult
-              name={name}
-              category={category}
-              ownership={ownership}
-              revenue={revenue}
-              anTesting={anTesting}
-              anInfo={anInfo}
-              envScore={envScore}
-              envInfo={envInfo}
-              labScore={labScore}
-              labInfo={labInfo}
-              philDonate={philDonate}
-              philInfo={philInfo}
-              newsSource={newsSource}
-              newsHeadline={newsHeadline}
-              totalScore={totalScore}
+              logo={results.logo}
+              name={results.name}
+              category={results.category}
+              ownership={results.ownership}
+              revenue={results.revenue}
+              anTesting={results.anTesting}
+              anInfo={results.anInfo}
+              envScore={results.envScore}
+              envInfo={results.envInfo}
+              labScore={results.labScore}
+              labInfo={results.labInfo}
+              philDonate={results.philDonate}
+              philInfo={results.philInfo}
+              newsSource={results.newsSource}
+              newsHeadline={results.newsHeadline}
+              totalScore={results.totalScore}
             />
           }
         />
       </Routes>
-    </div>
+      {errorMessage ? <div>{errorMessage}</div> : null}
+    </div> // If there is an error message, render it.
   );
 };
 

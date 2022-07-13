@@ -21,3 +21,25 @@
 .search-results_content {
     text-align: center;
 }
+
+.search-results_logo {
+    max-width: 175px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+}
+
+.info {
+    margin-bottom: 10px;
+}
+
+.info-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 20px 12px 20px;
+    padding: 8px;
+    border: solid 1px #DFBF8E;
+    background-color: #F7DBB2;
+    border-radius: 20px;
+    font-size: 14px;
+}
