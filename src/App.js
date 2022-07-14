@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
 import getByName from "./requests/getByName";
+import getAllByName from "./requests/getAllByName";
 
 const App = () => {
   const initialState = {
@@ -26,9 +27,15 @@ const App = () => {
   const [searchText, setSearchText] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [results, setResults] = useState(initialState);
+  const [allBrandNames, setAllBrandNames] = useState([]);
+
+  useEffect(() => {
+    getAllByName(setAllBrandNames);
+    console.log(allBrandNames);
+  }, []);
+  console.log(allBrandNames);
 
   const navigate = useNavigate();
-
   const handleBrandSearch = () => {
     if (!searchText) {
       setErrorMessage("Error, please enter a brand"); // If no text is entered

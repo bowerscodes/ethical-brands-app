@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/search.css";
+// import Dropdown from "./Dropdown";
 
 // eslint-disable-next-line react/prop-types
 const Search = ({ searchText, setSearchText, onSubmit }) => {
@@ -23,6 +24,7 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
           </div>
         </div>
       </div>
+      {/* <Dropdown setBrandNames={setBrandNames} /> */}
     </div>
   );
 };
