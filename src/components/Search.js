@@ -9,7 +9,7 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
     <div className="search-page">
       <div className="search-background">
         <div className="search-component">
-          <h2 className="search-title">Ethical Brands</h2>
+          <h1 className="search-title">Ethical Brands</h1>
           <div className="search-form">
             <input
               type="text"
