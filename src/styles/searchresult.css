@@ -1,39 +1,56 @@
-.search-results_button {
-    border: none;
-    background-color: #434343;
-    color: white;
-    margin-left: 15px;
-    margin-top: 15px;
-    padding: 10px;
+.top-page {
+    display: flex;
+    justify-content: space-between;
+}
+.top-page_button, .brand-score_high, .brand-score_average, .brand-score_low {
+    margin: 10px;
     height: 65px;
     width: 65px;
     border-radius: 50px;
 }
-
-.search-results_arrow {
+.top-page_button {
+    border: none;
+    background-color: #434343;
+    color: white;
+}
+.top-page_arrow {
     font-size: 35px;
     padding-right: 3px;
     color: #F6F5F5;
     align-items: center;
     justify-content: center;
 }
-
-.search-results_content {
+.brand-score_high, .brand-score_average, .brand-score_low {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
+.brand-score_high {
+    background-color: #a2b181;
+}
+.brand-score_average {
+    background-color: #DFBF8E;
+}
+.brand-score_low {
+    background-color: #cd3838;
+}
 
+
+.search-results_summary {
+    text-align: center;
+    position: relative;
+    margin: 10px;
+}
 .search-results_logo {
     max-width: 175px;
     max-height: 80px;
     width: auto;
     height: auto;
 }
-
-.info {
-    margin-bottom: 10px;
-}
-
-.info-card {
+.search-results_info {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     margin: 12px 20px 12px 20px;
