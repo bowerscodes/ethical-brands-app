@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/search.css";
 import Alert from "./Alert";
+import Dropdown from "./Dropdown";
 
 // eslint-disable-next-line react/prop-types
-const Search = ({ searchText, setSearchText, onSubmit }) => {
+const Search = ({ searchText, setSearchText, onSubmit, setBrandNames }) => {
   const handleInputChange = (event) => setSearchText(event.target.value);
 
   return (
@@ -21,6 +22,7 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
           SEARCH
         </button>
       </div>
+      <Dropdown setBrandNames={setBrandNames} />
     </div>
   );
 };
