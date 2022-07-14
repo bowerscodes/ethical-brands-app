@@ -17,8 +17,6 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
           onChange={handleInputChange}
           value={searchText}
         />
-      </div>
-      <div>
         <button type="submit" className="search-button" onClick={onSubmit}>
           SEARCH
         </button>

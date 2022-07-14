@@ -79,7 +79,9 @@ const App = () => {
           }
         />
       </Routes>
-      {errorMessage ? <div>{errorMessage}</div> : null}
+      {errorMessage ? (
+        <div className="error-message">{errorMessage}</div>
+      ) : null}
     </div> // If there is an error message, render it.
   );
 };
