@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const getAllByName = async (setBrandNames) => {
+const getAllByName = async (setAllBrandNames) => {
   const endpoint = "http://localhost:3000/brands";
 
   await axios
     .get(endpoint)
     .then((response) => {
-      const brandNames = response.data.map((value) => value.name);
-      console.log(brandNames);
-      setBrandNames(brandNames);
+      const names = response.data.map((value) => value.name);
+      // console.log(brandNames);
+      setAllBrandNames(names);
     })
     .catch((error) => {
       console.log(error);
