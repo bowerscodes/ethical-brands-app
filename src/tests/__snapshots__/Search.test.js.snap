@@ -5,6 +5,13 @@ exports[`search snapshot test 1`] = `
   <div
     class="search-component"
   >
+    <div
+      class="alert alert-error"
+    >
+      <p>
+        Not in database
+      </p>
+    </div>
     <h2
       class="search-title"
     >
@@ -17,6 +24,7 @@ exports[`search snapshot test 1`] = `
         <input
           class="search-input"
           type="text"
+          value=""
         />
       </div>
       <div>

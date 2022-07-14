@@ -70,6 +70,7 @@
 }
 .search-button {
     background-color: rgb(172, 185, 143);
+    color: white;
 }
 
 a {
@@ -77,4 +78,9 @@ a {
     text-decoration: none;
 } a:visited {
     color: white;
+}
+
+.error-message {
+    padding-top: 15px;
+    text-align: center;
 }
