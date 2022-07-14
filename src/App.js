@@ -27,17 +27,15 @@ const App = () => {
   const [searchText, setSearchText] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [results, setResults] = useState(initialState);
-
   const [allBrandNames, setAllBrandNames] = useState([]);
+
   useEffect(() => {
     getAllByName(setAllBrandNames);
     console.log(allBrandNames);
   }, []);
-
   console.log(allBrandNames);
 
   const navigate = useNavigate();
-
   const handleBrandSearch = () => {
     if (!searchText) {
       setErrorMessage("Error, please enter a brand"); // If no text is entered

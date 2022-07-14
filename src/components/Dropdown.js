@@ -14,7 +14,7 @@ const Dropdown = (props) => {
       {setBrandNames.map((brand) => {
         return (
           <button type="button" className="dropdown-button">
-            {brand}
+            {brand.name}
           </button>
         );
       })}
