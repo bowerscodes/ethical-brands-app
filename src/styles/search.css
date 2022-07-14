@@ -1,3 +1,26 @@
+.search-page {
+    background-image: url('../assets/header_jungle.jpeg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.search-background {
+    margin-top: 50%;
+    height: 70vh;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+    color: black;
+    font-family: 'DM Serif Display', Serif;
+}
+
 .search-component {
     box-sizing: border-box;
     text-align: center;
@@ -7,20 +30,23 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 250px;
+
+}
+
+.search-header {
+    background-color: white;
+    margin-top: 50px;
+
 }
 
 .search-title {
-    height: 30vh;
     width: 100%;
     bottom: 0;
     margin-top: 8px;
     padding-top: 20px;
-    background-image: url('../assets/header_jungle.jpeg');
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    color: white;
+
+    color: black;
     font-family: 'DM Serif Display', Serif;
 }
 
@@ -52,5 +78,3 @@ a {
 } a:visited {
     color: white;
 }
-
-/* background-size: cover; */
