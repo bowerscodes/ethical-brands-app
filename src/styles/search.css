@@ -80,7 +80,17 @@ a {
     color: white;
 }
 
-.error-message {
-    padding-top: 15px;
-    text-align: center;
+.filter-brands {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    width: 70%;
+}
+
+.filter-brands_button {
+    width: 100%;
+    padding: 5px;
+    border: solid 1px rgb(172, 185, 143);
+    border-radius: 5px;
 }
