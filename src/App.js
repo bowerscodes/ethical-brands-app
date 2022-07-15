@@ -30,12 +30,11 @@ const App = () => {
   const [allBrandNames, setAllBrandNames] = useState([]);
 
   useEffect(() => {
-    getAllByName(setAllBrandNames);
-    console.log(allBrandNames);
-  }, []);
-  console.log(allBrandNames);
+    getByName(searchText, setResults, setErrorMessage);
+  }, [searchText]);
 
   const navigate = useNavigate();
+
   const handleBrandSearch = () => {
     if (!searchText) {
       setErrorMessage("Error, please enter a brand"); // If no text is entered
@@ -46,6 +45,11 @@ const App = () => {
       }
     }
   };
+
+  useEffect(() => {
+    getAllByName(setAllBrandNames);
+  }, []);
+  console.log(allBrandNames);
 
   return (
     <div>

@@ -34,11 +34,10 @@ const getByName = async (searchText, setResults, setErrorMessage) => {
           totalScore: res.data.totalScore,
         };
         setResults(returnedData);
-        console.log(returnedData);
       }
     })
     .catch((error) => {
-      console.log(error);
+      console.error(error);
       setErrorMessage("Server Error!");
     });
 };
