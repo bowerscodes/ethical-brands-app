@@ -2,7 +2,7 @@
     background-image: url('../assets/header_jungle.jpeg');
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end
@@ -10,12 +10,12 @@
 
 .search-background {
     margin-top: 50%;
-    height: 70vh;
+    height: 25vh;
     width: 100%;
-    bottom: 0;
     background-color: white;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
+    outline: 2px solid white;
 
     color: black;
     font-family: 'DM Serif Display', Serif;

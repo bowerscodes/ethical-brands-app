@@ -38,7 +38,7 @@ const getByName = async (searchText, setResults, setErrorMessage) => {
     })
     .catch((error) => {
       console.error(error);
-      setErrorMessage("Server Error!");
+      setErrorMessage("Type a Company name to Serarch");
     });
 };
 
