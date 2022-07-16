@@ -3,9 +3,17 @@
   flex-direction: column;
   background-color: white;
   height: 100vh;
-  background-image: url('./assets/header_jungle.jpeg');
   background-size: cover;
   justify-content: flex-end;
+}
+.app-container-bgimage1 {
+  background-image: url("./assets/bg_jungle.jpeg");
+} .app-container-bgimage2 {
+  background-image: url("./assets/bg_mountainlake.jpeg");
+} .app-container-bgimage3 {
+  background-image: url("./assets/bg_desert.jpeg");
+} .app-container-bgimage4 {
+  background-image: url("./assets/bg_snowymountain.jpeg");
 }
 
 .title {

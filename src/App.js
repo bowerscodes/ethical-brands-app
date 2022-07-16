@@ -4,6 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
 import getByName from "./requests/getByName";
+
 // import getAllByName from "./requests/getAllByName";
 
 const App = () => {
@@ -33,6 +34,10 @@ const App = () => {
     getByName(searchText, setResults, setErrorMessage);
   }, [searchText]);
 
+  const bgArray = ["bgimage1", "bgimage2", "bgimage3", "bgimage4"];
+  const randomIndex = Math.floor(Math.random() * bgArray.length);
+  const selectedBackground = bgArray[randomIndex];
+
   const navigate = useNavigate();
 
   const handleBrandSearch = () => {
@@ -53,7 +58,7 @@ const App = () => {
 
   return (
     <>
-      <div className="app-container">
+      <div className={`app-container app-container-${selectedBackground}`}>
         {errorMessage ? (
           <div className="error-message">{errorMessage}</div>
         ) : null}
