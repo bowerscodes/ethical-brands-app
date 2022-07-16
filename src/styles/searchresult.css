@@ -1,7 +1,14 @@
+.search-result_page {
+    height: 100vh;
+    max-height: 100vh;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
 
 .top-page {
     display: flex;
     justify-content: space-between;
+    margin: 0 20px;
 }
 .top-page_button, .brand-score_high, .brand-score_average, .brand-score_low {
     margin: 10px;
@@ -11,7 +18,7 @@
 }
 .top-page_button {
     border: none;
-    background-color: #434343;
+    background-color: #ffffff80;
     color: white;
 }
 .top-page_arrow {
@@ -23,6 +30,7 @@
 }
 .brand-score_high, .brand-score_average, .brand-score_low {
     color: white;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,8 +50,23 @@
 .search-results_summary {
     text-align: center;
     position: relative;
-    margin: 10px;
+    margin: 20px 20px 0;
+    padding: 15px 15px 0;
+    background-color: white;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
 }
+.search-results-container {
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0 20px 10px;
+    padding: 10px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
 .search-results_logo {
     max-width: 175px;
     max-height: 80px;

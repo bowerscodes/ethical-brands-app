@@ -54,6 +54,9 @@ const App = () => {
   return (
     <>
       <div className="app-container">
+        {errorMessage ? (
+          <div className="error-message">{errorMessage}</div>
+        ) : null}
         <Routes>
           <Route
             exact
@@ -91,9 +94,9 @@ const App = () => {
             }
           />
         </Routes>
-        {errorMessage ? (
+        {/* {errorMessage ? (
           <div className="error-message">{errorMessage}</div>
-        ) : null}
+        ) : null} */}
         {/* <div className="footer">Copyright 2022 Ethical Brands, Inc.</div> */}
       </div>{" "}
     </>

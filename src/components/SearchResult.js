@@ -33,7 +33,7 @@ const SearchResult = ({
   }
 
   return (
-    <div>
+    <div className="search-result_page">
       <div className="top-page">
         <Link to="/">
           <button type="submit" className="top-page_button">
@@ -50,7 +50,7 @@ const SearchResult = ({
         <div>Revenue: {revenue}</div>
       </div>
 
-      <div>
+      <div className="search-results-container">
         <div className="search-results_info">
           Animal Testing: {`${anTesting}, ${anInfo}`}
         </div>
