@@ -1,5 +1,8 @@
-* {
+.app-container {
+  display: flex;
+  flex-direction: column;
   background-color: white;
+  height: 100vh;
 }
 
 .title {
@@ -9,4 +12,16 @@
 .error-message {
   text-align: center;
   font-style: italic;
+  background-color: white;
+  flex-grow: 3;
+}
+
+.footer {
+  display: flex;
+  background-color: white;
+  height: auto;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 20px;
+  /* align-self: flex-end; */
 }

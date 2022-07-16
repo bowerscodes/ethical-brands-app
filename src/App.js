@@ -52,51 +52,51 @@ const App = () => {
   // console.log(allBrandNames);
 
   return (
-    <div>
-      {/* {errorMessage ? (
-        <div className="error-message">{errorMessage}</div>
-      ) : null} */}
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <Search
-              searchText={searchText}
-              setSearchText={setSearchText}
-              onSubmit={handleBrandSearch}
-            />
-          }
-        />
-        <Route
-          exact
-          path="/search-results"
-          element={
-            <SearchResult
-              logo={results.logo}
-              name={results.name}
-              category={results.category}
-              ownership={results.ownership}
-              revenue={results.revenue}
-              anTesting={results.anTesting}
-              anInfo={results.anInfo}
-              envScore={results.envScore}
-              envInfo={results.envInfo}
-              labScore={results.labScore}
-              labInfo={results.labInfo}
-              philDonate={results.philDonate}
-              philInfo={results.philInfo}
-              newsSource={results.newsSource}
-              newsHeadline={results.newsHeadline}
-              totalScore={results.totalScore}
-            />
-          }
-        />
-      </Routes>
-      {errorMessage ? (
-        <div className="error-message">{errorMessage}</div>
-      ) : null}
-    </div> // If there is an error message, render it.
+    <>
+      <div className="app-container">
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <Search
+                searchText={searchText}
+                setSearchText={setSearchText}
+                onSubmit={handleBrandSearch}
+              />
+            }
+          />
+          <Route
+            exact
+            path="/search-results"
+            element={
+              <SearchResult
+                logo={results.logo}
+                name={results.name}
+                category={results.category}
+                ownership={results.ownership}
+                revenue={results.revenue}
+                anTesting={results.anTesting}
+                anInfo={results.anInfo}
+                envScore={results.envScore}
+                envInfo={results.envInfo}
+                labScore={results.labScore}
+                labInfo={results.labInfo}
+                philDonate={results.philDonate}
+                philInfo={results.philInfo}
+                newsSource={results.newsSource}
+                newsHeadline={results.newsHeadline}
+                totalScore={results.totalScore}
+              />
+            }
+          />
+        </Routes>
+        {errorMessage ? (
+          <div className="error-message">{errorMessage}</div>
+        ) : null}
+        <div className="footer">Copyright 2022 Ethical Brands, Inc.</div>
+      </div>{" "}
+    </>
   );
 };
 
