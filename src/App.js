@@ -53,9 +53,9 @@ const App = () => {
 
   return (
     <div>
-      {errorMessage ? (
+      {/* {errorMessage ? (
         <div className="error-message">{errorMessage}</div>
-      ) : null}
+      ) : null} */}
       <Routes>
         <Route
           exact
@@ -93,6 +93,9 @@ const App = () => {
           }
         />
       </Routes>
+      {errorMessage ? (
+        <div className="error-message">{errorMessage}</div>
+      ) : null}
     </div> // If there is an error message, render it.
   );
 };
