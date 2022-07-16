@@ -6,19 +6,26 @@ import getAllByName from "../requests/getAllByName";
 const Search = ({ searchText, setSearchText, onSubmit }) => {
   const [allBrandNames, setAllBrandNames] = useState([]);
   const [showList, setShowList] = useState(false);
+  const [filteredBrands, setFilteredBrands] = useState([]);
 
-  // setSearch is whatever the user types
+  // setSearchText is whatever the user types
   const handleInputChange = (event) => {
     setSearchText(event.target.value);
-    setAllBrandNames(
-      allBrandNames.filter((option) => option.includes(event.target.value))
+    setFilteredBrands(
+      allBrandNames.filter((option) =>
+        option.toLowerCase().includes(event.target.value)
+      )
     );
     // Filters brands to what is included in the user input, assigns setAllBrandNames to this.
     setShowList(true);
   };
 
+  const initialiseBrandsNames = (brandNames) => {
+    setAllBrandNames(brandNames);
+  };
+
   useEffect(() => {
-    getAllByName(setAllBrandNames);
+    getAllByName(initialiseBrandsNames);
   }, []);
 
   return (
@@ -36,15 +43,17 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
             />
             {showList ? ( // If show list is true, render list of brands, else null
               <ul className="filter-brands">
-                {allBrandNames.map((option) => {
+                {filteredBrands.map((option) => {
                   return (
-                    <button
-                      type="button"
-                      className="filter-brands_button"
-                      onClick={() => setSearchText(option)}
-                    >
-                      {option}
-                    </button>
+                    <li key={option}>
+                      <button
+                        type="button"
+                        className="filter-brands_button"
+                        onClick={() => setSearchText(option)}
+                      >
+                        {option}
+                      </button>
+                    </li>
                   );
                 })}
               </ul>

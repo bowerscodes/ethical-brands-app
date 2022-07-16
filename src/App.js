@@ -5,8 +5,6 @@ import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
 import getByName from "./requests/getByName";
 
-// import getAllByName from "./requests/getAllByName";
-
 const App = () => {
   const initialState = {
     logo: "",
@@ -28,10 +26,9 @@ const App = () => {
   const [searchText, setSearchText] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [results, setResults] = useState(initialState);
-  // const [allBrandNames, setAllBrandNames] = useState([]);
 
   useEffect(() => {
-    getByName(searchText, setResults, setErrorMessage);
+    getByName(searchText, setSearchText, setErrorMessage);
   }, [searchText]);
 
   const bgArray = ["bgimage1", "bgimage2", "bgimage3", "bgimage4"];
@@ -50,11 +47,6 @@ const App = () => {
       }
     }
   };
-
-  // useEffect(() => {
-  //   getAllByName(setAllBrandNames);
-  // }, []);
-  // console.log(allBrandNames);
 
   return (
     <>
@@ -99,9 +91,6 @@ const App = () => {
             }
           />
         </Routes>
-        {/* {errorMessage ? (
-          <div className="error-message">{errorMessage}</div>
-        ) : null} */}
         {/* <div className="footer">Copyright 2022 Ethical Brands, Inc.</div> */}
       </div>{" "}
     </>

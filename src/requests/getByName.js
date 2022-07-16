@@ -38,7 +38,7 @@ const getByName = async (searchText, setResults, setErrorMessage) => {
     })
     .catch((error) => {
       console.error(error);
-      setErrorMessage("Type a Company name to Search");
+      setErrorMessage("Type a Company name to Search!");
     });
 };
 
