@@ -31,6 +31,10 @@ const App = () => {
     getByName(searchText, setSearchText, setErrorMessage);
   }, [searchText]);
 
+  const bgArray = ["bgimage1", "bgimage2", "bgimage3", "bgimage4"];
+  const randomIndex = Math.floor(Math.random() * bgArray.length);
+  const selectedBackground = bgArray[randomIndex];
+
   const navigate = useNavigate();
 
   const handleBrandSearch = () => {
@@ -45,48 +49,51 @@ const App = () => {
   };
 
   return (
-    <div>
-      {errorMessage ? (
-        <div className="error-message">{errorMessage}</div>
-      ) : null}
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <Search
-              searchText={searchText}
-              setSearchText={setSearchText}
-              onSubmit={handleBrandSearch}
-            />
-          }
-        />
-        <Route
-          exact
-          path="/search-results"
-          element={
-            <SearchResult
-              logo={results.logo}
-              name={results.name}
-              category={results.category}
-              ownership={results.ownership}
-              revenue={results.revenue}
-              anTesting={results.anTesting}
-              anInfo={results.anInfo}
-              envScore={results.envScore}
-              envInfo={results.envInfo}
-              labScore={results.labScore}
-              labInfo={results.labInfo}
-              philDonate={results.philDonate}
-              philInfo={results.philInfo}
-              newsSource={results.newsSource}
-              newsHeadline={results.newsHeadline}
-              totalScore={results.totalScore}
-            />
-          }
-        />
-      </Routes>
-    </div> // If there is an error message, render it.
+    <>
+      <div className={`app-container app-container-${selectedBackground}`}>
+        {errorMessage ? (
+          <div className="error-message">{errorMessage}</div>
+        ) : null}
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <Search
+                searchText={searchText}
+                setSearchText={setSearchText}
+                onSubmit={handleBrandSearch}
+              />
+            }
+          />
+          <Route
+            exact
+            path="/search-results"
+            element={
+              <SearchResult
+                logo={results.logo}
+                name={results.name}
+                category={results.category}
+                ownership={results.ownership}
+                revenue={results.revenue}
+                anTesting={results.anTesting}
+                anInfo={results.anInfo}
+                envScore={results.envScore}
+                envInfo={results.envInfo}
+                labScore={results.labScore}
+                labInfo={results.labInfo}
+                philDonate={results.philDonate}
+                philInfo={results.philInfo}
+                newsSource={results.newsSource}
+                newsHeadline={results.newsHeadline}
+                totalScore={results.totalScore}
+              />
+            }
+          />
+        </Routes>
+        {/* <div className="footer">Copyright 2022 Ethical Brands, Inc.</div> */}
+      </div>{" "}
+    </>
   );
 };
 
