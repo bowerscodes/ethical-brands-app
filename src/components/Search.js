@@ -20,12 +20,12 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
     setShowList(true);
   };
 
-  const initialiseBrandsNames = (brandNames) => {
+  const initializeBrandsNames = (brandNames) => {
     setAllBrandNames(brandNames);
   };
 
   useEffect(() => {
-    getAllByName(initialiseBrandsNames);
+    getAllByName(initializeBrandsNames);
   }, []);
 
   return (
