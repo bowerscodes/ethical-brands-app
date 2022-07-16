@@ -94,7 +94,7 @@ const App = () => {
         {errorMessage ? (
           <div className="error-message">{errorMessage}</div>
         ) : null}
-        <div className="footer">Copyright 2022 Ethical Brands, Inc.</div>
+        {/* <div className="footer">Copyright 2022 Ethical Brands, Inc.</div> */}
       </div>{" "}
     </>
   );

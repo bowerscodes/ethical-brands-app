@@ -63,6 +63,7 @@
     font-size: 14px;
 }
 
-a {
-    color: black;
+a, a:visited {
+    color: darkblue;
+    text-decoration: underline;
 }
