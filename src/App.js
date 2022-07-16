@@ -4,7 +4,6 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
 import getByName from "./requests/getByName";
-// import getAllByName from "./requests/getAllByName";
 
 const App = () => {
   const initialState = {
@@ -27,10 +26,9 @@ const App = () => {
   const [searchText, setSearchText] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [results, setResults] = useState(initialState);
-  // const [allBrandNames, setAllBrandNames] = useState([]);
 
   useEffect(() => {
-    getByName(searchText, setResults, setErrorMessage);
+    getByName(searchText, setSearchText, setErrorMessage);
   }, [searchText]);
 
   const navigate = useNavigate();
@@ -45,11 +43,6 @@ const App = () => {
       }
     }
   };
-
-  // useEffect(() => {
-  //   getAllByName(setAllBrandNames);
-  // }, []);
-  // console.log(allBrandNames);
 
   return (
     <div>
