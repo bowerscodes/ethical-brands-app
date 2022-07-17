@@ -23,6 +23,7 @@ const getByName = async (searchText, setResults, setErrorMessage) => {
           ownership: res.data.ownership.owner,
           anTesting: res.data.animals.testing,
           anInfo: res.data.animals.info,
+          anScore: res.data.animals.score,
           envScore: res.data.environment.score,
           envInfo: res.data.environment.info,
           labScore: res.data.labour.score,

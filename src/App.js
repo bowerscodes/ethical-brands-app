@@ -13,10 +13,11 @@ const App = () => {
     revenue: "",
     anTesting: "",
     anInfo: "",
-    envScore: 0,
+    anScore: 0,
     envInfo: "",
-    labScore: 0,
+    envScore: 0,
     labInfo: "",
+    labScore: 0,
     philDonate: "",
     philInfo: "",
     newsSource: "",
@@ -77,10 +78,11 @@ const App = () => {
               revenue={results.revenue}
               anTesting={results.anTesting}
               anInfo={results.anInfo}
-              envScore={results.envScore}
+              anScore={results.anScore}
               envInfo={results.envInfo}
-              labScore={results.labScore}
+              envScore={results.envScore}
               labInfo={results.labInfo}
+              labScore={results.labScore}
               philDonate={results.philDonate}
               philInfo={results.philInfo}
               newsSource={results.newsSource}
