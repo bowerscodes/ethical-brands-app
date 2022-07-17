@@ -3,6 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/searchresult.css";
 import { FaAngleLeft } from "react-icons/fa";
+import animalIcon from "../assets/icons8-elephant-64.png";
+import environmentIcon from "../assets/icons8-europe-64.png";
+import labourIcon from "../assets/icons8-workers-64.png";
+import philanthropyIcon from "../assets/icons8-donate-64.png";
+import newsIcon from "../assets/icons8-magazine-64.png";
 
 // eslint-disable-next-line react/prop-types
 const SearchResult = ({
@@ -13,24 +18,32 @@ const SearchResult = ({
   revenue,
   anTesting,
   anInfo,
-  envScore,
+  anScore,
   envInfo,
-  labScore,
+  envScore,
   labInfo,
+  labScore,
   philDonate,
   philInfo,
   newsSource,
   newsHeadline,
   totalScore,
 }) => {
-  let className = "brand-score_"; // Conditional class naming based on score of brand
+  let scoreColor = "brand-score_"; // Conditional class naming based on score of brand
   if (totalScore >= 75) {
-    className += "high";
+    scoreColor += "high";
   } else if (totalScore < 75 && totalScore > 49) {
-    className += "average";
+    scoreColor += "average";
   } else {
-    className += "low";
+    scoreColor += "low";
   }
+
+  const formatting = Intl.NumberFormat("en-US", {
+    // Format revenue number into currency type of USD
+    style: "currency",
+    currency: "USD",
+  });
+  const formattedRevenue = formatting.format(revenue);
 
   return (
     <div className="search-result_page">
@@ -40,32 +53,58 @@ const SearchResult = ({
             <FaAngleLeft className="top-page_arrow" />
           </button>
         </Link>
-        <div className={`${className}`}>Score: {totalScore}</div>
+        <div className={`${scoreColor}`}>Score: {totalScore}</div>
       </div>
 
       <div className="search-results_summary">
         <img src={`${logo}`} alt="brand logo" className="search-results_logo" />
         <div>{`${name}, ${category}`}</div>
         <div>Ownership: {ownership}</div>
-        <div>Revenue: {revenue}</div>
+        <div>Revenue: {formattedRevenue}</div>
       </div>
 
       <div className="search-results-container">
         <div className="search-results_info">
-          Animal Testing: {`${anTesting}, ${anInfo}`}
+          <div className="icon-and-score">
+            <img src={animalIcon} alt="animal icon" className="icon" />
+            {`${anScore}`}/5
+          </div>
+          {`${anTesting}, ${anInfo}`}
         </div>
         <div className="search-results_info">
-          Environment: {`${envInfo}, ${envScore}`}
+          <div className="icon-and-score">
+            <img
+              src={environmentIcon}
+              alt="environment icon"
+              className="icon"
+            />
+            {`${envScore}`}/5
+          </div>
+          {`${envInfo}`}
         </div>
         <div className="search-results_info">
-          Labour: {`${labInfo}, ${labScore}`}
+          <div className="icon-and-score">
+            <img src={labourIcon} alt="labour icon" className="icon" />
+            {`${labScore}`}/5
+          </div>
+          {`${labInfo}`}
         </div>
         <div className="search-results_info">
-          Philanthropy: {`${philInfo}, ${philDonate}`}
+          <div className="icon-and-score">
+            <img
+              src={philanthropyIcon}
+              alt="philanthropy icon"
+              className="icon"
+            />
+          </div>
+          {`${philInfo}, ${philDonate}`}
         </div>
         <div className="search-results_info">
+          <div>
+            <img src={newsIcon} alt="news icon" className="icon" />
+          </div>
           <a href={newsSource} target="_blank" rel="noreferrer">
-            News: {newsHeadline}
+            {newsHeadline}
           </a>
         </div>
       </div>

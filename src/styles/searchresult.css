@@ -76,7 +76,8 @@
 .search-results_info {
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     margin: 12px 20px 12px 20px;
     padding: 8px;
@@ -89,4 +90,15 @@
 a, a:visited {
     color: darkblue;
     text-decoration: underline;
+}
+
+.icon-and-score {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    padding: 5px;
 }
