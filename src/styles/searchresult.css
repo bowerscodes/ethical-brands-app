@@ -76,10 +76,11 @@
 .search-results_info {
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 12px 20px 12px 20px;
-    padding: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 15px 12px 15px;
+    padding: 12px 12px 12px 8px;
     border: solid 1px #DFBF8E;
     background-color: #F7DBB2;
     border-radius: 20px;
@@ -89,4 +90,15 @@
 a, a:visited {
     color: darkblue;
     text-decoration: underline;
+}
+
+.icon-and-score {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    padding: 5px;
 }

@@ -1,0 +1,35 @@
+.search-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reference-info {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    padding: 20px;
+}
+hr {
+    color: white;
+    width: 80%;
+}
+ul {
+    padding: 0px;
+}
+li {
+    list-style-type: none;
+}

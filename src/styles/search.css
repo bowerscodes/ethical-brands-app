@@ -4,24 +4,12 @@
     height: 60vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    justify-content: space-between;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
 }
 
-/* .search-background {
-    margin-top: 50%;
-    height: 25vh;
-    width: 100%;
-    background-color: white;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    outline: 2px solid white;
-    color: black;
-    font-family: 'DM Serif Display', Serif;
-} */
-
-.search-component {
+.search-functionality {
     box-sizing: border-box;
     text-align: center;
     display: flex;
@@ -32,28 +20,18 @@
     margin-right: auto;
 
 }
-
-.search-header {
-    background-color: white;
-    margin-top: 50px;
-
-}
-
 .search-title {
     width: 100%;
     bottom: 0;
     margin-top: 8px;
     padding-top: 20px;
-
     color: black;
     font-family: 'DM Serif Display', Serif;
 }
-
 .search-form {
     box-sizing: border-box;
     width: 100%;
 }
-
 .search-input, .search-button {
     box-sizing: border-box;
     margin-top: 8px;
@@ -86,10 +64,9 @@ a {
     position: absolute;
     width: 70%;
 }
-
 .filter-brands_button {
     width: 100%;
     padding: 5px;
     border: solid 1px rgb(172, 185, 143);
-    border-radius: 5px;
+    border-radius: 3px;
 }
