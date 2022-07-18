@@ -53,7 +53,9 @@ const SearchResult = ({
             <FaAngleLeft className="top-page_arrow" />
           </button>
         </Link>
-        <div className={`${scoreColor}`}>Score: {totalScore}</div>
+        <div className={`${scoreColor}`}>
+          Score: <br /> {totalScore}
+        </div>
       </div>
 
       <div className="search-results_summary">
@@ -69,8 +71,11 @@ const SearchResult = ({
             <img src={animalIcon} alt="animal icon" className="icon" />
             {`${anScore}`}/5
           </div>
-          {`${anTesting}, ${anInfo}`}
+          Animal Testing: {`${anTesting}`}. <br /> {`${anInfo}`}
+          {/* Empty div after each section to ensure there is space between when no information is provided */}
+          <div />
         </div>
+
         <div className="search-results_info">
           <div className="icon-and-score">
             <img
@@ -81,14 +86,18 @@ const SearchResult = ({
             {`${envScore}`}/5
           </div>
           {`${envInfo}`}
+          <div />
         </div>
+
         <div className="search-results_info">
           <div className="icon-and-score">
             <img src={labourIcon} alt="labour icon" className="icon" />
             {`${labScore}`}/5
           </div>
           {`${labInfo}`}
+          <div />
         </div>
+
         <div className="search-results_info">
           <div className="icon-and-score">
             <img
@@ -98,7 +107,9 @@ const SearchResult = ({
             />
           </div>
           {`${philInfo}, ${philDonate}`}
+          <div />
         </div>
+
         <div className="search-results_info">
           <div>
             <img src={newsIcon} alt="news icon" className="icon" />
@@ -106,6 +117,7 @@ const SearchResult = ({
           <a href={newsSource} target="_blank" rel="noreferrer">
             {newsHeadline}
           </a>
+          <div />
         </div>
       </div>
     </div>
