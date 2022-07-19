@@ -1,0 +1,75 @@
+.search-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reference-button, .repos-button {
+    z-index: 3;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    margin: 0px 15px 15px 15px;
+    font-size: 20px;
+    color: rgb(162, 177, 129);
+    border: solid 1px rgb(162, 177, 129);
+}
+
+.reference-info {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.repos-info {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 70%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+}
+.repos-info > p > a {
+    color: white;
+    text-decoration: none;
+}
+.github-icon {
+    font-size: 22px;
+    color: white;
+}
+
+
+p {
+    padding: 20px;
+    margin: 0px;
+}
+hr {
+    color: white;
+    width: 80%;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+li {
+    list-style-type: none;
+}
