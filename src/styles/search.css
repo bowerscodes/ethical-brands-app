@@ -93,3 +93,14 @@ a {
     border: solid 1px rgb(172, 185, 143);
     border-radius: 5px;
 }
+
+@media (max-width: 850px) {
+    .search-input, .search-button {
+        max-width: 80%;
+    }
+}
+@media (min-width: 850px) {
+    .search-input, .search-button {
+        max-width: 55%;
+    }
+}
