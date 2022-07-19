@@ -72,12 +72,12 @@ a {
 }
 
 @media (max-width: 850px) {
-    .search-input, .search-button {
+    .search-input, .search-button, .filter-brands_button {
         max-width: 80%;
     }
 }
 @media (min-width: 850px) {
-    .search-input, .search-button {
+    .search-input, .search-button, .filter-brands_button {
         max-width: 55%;
     }
 }
