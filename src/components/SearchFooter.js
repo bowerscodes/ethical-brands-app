@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/searchfooter.css";
+import { FaCode, FaInfo } from "react-icons/fa";
 
 const SearchFooter = () => {
   const [referenceList, setReferenceList] = useState(false);
@@ -8,33 +9,34 @@ const SearchFooter = () => {
     <div className="search-footer">
       <button
         type="button"
-        className="references-button"
+        className="reference-button"
         onClick={() => setReferenceList(!referenceList)}
       >
-        Reference List & Disclaimer
+        <FaInfo />
       </button>
       {referenceList ? (
-        // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-        <div
-          className="reference-info"
-          onClick={() => setReferenceList(!referenceList)}
-        >
+        <div className="reference-info">
           <h3>Disclaimer</h3>
           <p>
-            Lorem ipsum dolor sit amet. Ea magnam sequi et quia laudantium quo
-            quia consequatur non quisquam neque.
+            When a company does not publicise information there are various
+            risks you take as a consumer. The climate impact of that company or
+            product is likely to be much higher compared to industry peers, for
+            example. Animals and humans may be harmed and damaging chemicals may
+            be used during the manufacturing process.
           </p>
           <hr />
-          <h3>Reference List</h3>
+          <h3>References</h3>
           <ul className="reference-list">
-            <li>Reference 1</li>
-            <li>Reference 2</li>
-            <li>Reference 3</li>
+            <li>https://www.ethical.org.au/3.4.2/</li>
+            <li>https://www.fairify.io/</li>
+            <li>https://thegoodshoppingguide.com/</li>
+            <li>https://crueltyfree.peta.org/</li>
+            <li>https://directory.goodonyou.eco/</li>
           </ul>
         </div>
       ) : null}
       <button type="button" className="repos-button">
-        Github repos
+        <FaCode />
       </button>
     </div>
   );

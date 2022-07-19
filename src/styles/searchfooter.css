@@ -20,8 +20,20 @@
     justify-content: center;
 }
 
+.reference-button, .repos-button {
+    z-index: 3;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    margin: 0px 15px 15px 15px;
+    font-size: 20px;
+    color: rgb(162, 177, 129);
+    border: solid 1px rgb(162, 177, 129);
+}
+
 p {
     padding: 20px;
+    margin: 0px;
 }
 hr {
     color: white;
@@ -29,6 +41,7 @@ hr {
 }
 ul {
     padding: 0px;
+    margin: 0px;
 }
 li {
     list-style-type: none;
