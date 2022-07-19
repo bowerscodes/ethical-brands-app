@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "../styles/searchfooter.css";
-import { FaCode, FaInfo } from "react-icons/fa";
+import { FaCode, FaInfo, FaGithub } from "react-icons/fa";
 
 const SearchFooter = () => {
   const [referenceList, setReferenceList] = useState(false);
+  const [repos, setRepos] = useState(false);
 
   return (
     <div className="search-footer">
@@ -35,9 +36,36 @@ const SearchFooter = () => {
           </ul>
         </div>
       ) : null}
-      <button type="button" className="repos-button">
+      <button
+        type="button"
+        className="repos-button"
+        onClick={() => setRepos(!repos)}
+      >
         <FaCode />
       </button>
+      {repos ? (
+        <div className="repos-info">
+          <p>
+            <a
+              href="https://github.com/bowerscodes/ethical-brands-app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub className="github-icon" /> Frontend
+            </a>
+          </p>
+          <hr />
+          <p>
+            <a
+              href="https://github.com/benjQuinn/ethical-brands-mongodb"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub className="github-icon" /> Backend
+            </a>
+          </p>
+        </div>
+      ) : null}
     </div>
   );
 };
