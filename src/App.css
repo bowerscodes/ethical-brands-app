@@ -5,15 +5,7 @@
   height: 100vh;
   background-size: cover;
   justify-content: flex-end;
-}
-.app-container-bgimage1 {
   background-image: url("./assets/bg_jungle.jpeg");
-} .app-container-bgimage2 {
-  background-image: url("./assets/bg_mountainlake.jpeg");
-} .app-container-bgimage3 {
-  background-image: url("./assets/bg_desert.jpeg");
-} .app-container-bgimage4 {
-  background-image: url("./assets/bg_snowymountain.jpeg");
 }
 
 .title {
@@ -25,18 +17,5 @@
   font-style: italic;
   font-weight: 500;
   color: white;
-  /* background-color: white; */
   padding: 20px;
-  /* height: 40vh; */
 }
-
-/* .footer {
-  display: flex;
-  background-color: white;
-  height: auto;
-  text-align: center;
-  align-self: center;
-  margin-bottom: 20px;
-  bottom: 0%;
-  padding-top: 100%;
-} */

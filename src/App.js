@@ -32,10 +32,6 @@ const App = () => {
     getByName(searchText, setResults, setErrorMessage);
   }, [searchText]);
 
-  const bgArray = ["bgimage1", "bgimage2", "bgimage3", "bgimage4"];
-  const randomIndex = Math.floor(Math.random() * bgArray.length);
-  const selectedBackground = bgArray[randomIndex];
-
   const navigate = useNavigate();
 
   const handleBrandSearch = () => {
@@ -50,7 +46,7 @@ const App = () => {
   };
 
   return (
-    <div className={`app-container app-container-${selectedBackground}`}>
+    <div className="app-container">
       {errorMessage ? (
         <div className="error-message">{errorMessage}</div>
       ) : null}
@@ -92,7 +88,6 @@ const App = () => {
           }
         />
       </Routes>
-      {/* <div className="footer">Copyright 2022 Ethical Brands, Inc.</div> */}
     </div>
   );
 };
