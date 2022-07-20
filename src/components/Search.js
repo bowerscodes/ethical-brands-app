@@ -31,7 +31,6 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
 
   return (
     <div className="search-page">
-      {/* <div className="search-background"> */}
       <div className="search-functionality">
         <h1 className="search-title">Ethical Brands</h1>
         <div className="search-form">
@@ -50,7 +49,11 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
                     <button
                       type="button"
                       className="filter-brands_button"
-                      onClick={() => setSearchText(option)}
+                      onClick={() => {
+                        // Double setter for when a brand is chosen
+                        setSearchText(option);
+                        setShowList(false);
+                      }}
                     >
                       {option}
                     </button>
