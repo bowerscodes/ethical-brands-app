@@ -3,6 +3,7 @@ import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Search from "./components/Search";
 import SearchResult from "./components/SearchResult";
+import Category from "./components/Category";
 import getByName from "./requests/getByName";
 
 const App = () => {
@@ -43,6 +44,10 @@ const App = () => {
       setErrorMessage("Error, please enter a brand"); // If no text is entered
     } else {
       getByName(searchText, setResults, setErrorMessage);
+      // eslint-disable-next-line no-constant-condition
+      if (searchText === "clothing" || "beverage" || "food") {
+        navigate("/category");
+      }
       if (!errorMessage) {
         navigate("/search-results");
       }
@@ -63,6 +68,19 @@ const App = () => {
               searchText={searchText}
               setSearchText={setSearchText}
               onSubmit={handleBrandSearch}
+            />
+          }
+        />
+        <Route
+          exact
+          path="/category"
+          element={
+            <Category
+              logo={results.logo}
+              anScore={results.anScore}
+              envScore={results.envScore}
+              labScore={results.labScore}
+              totalScore={results.totalScore}
             />
           }
         />
