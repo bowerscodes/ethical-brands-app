@@ -10,7 +10,7 @@ const App = () => {
     logo: "",
     name: "",
     ownership: "",
-    revenue: "",
+    revenue: 0,
     anTesting: "",
     anInfo: "",
     anScore: 0,

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "../styles/searchresult.css";
 import { FaAngleLeft } from "react-icons/fa";
@@ -9,7 +10,6 @@ import labourIcon from "../assets/icons8-workers-64.png";
 import philanthropyIcon from "../assets/icons8-donate-64.png";
 import newsIcon from "../assets/icons8-magazine-64.png";
 
-// eslint-disable-next-line react/prop-types
 const SearchResult = ({
   logo,
   name,
@@ -125,3 +125,23 @@ const SearchResult = ({
 };
 
 export default SearchResult;
+
+SearchResult.propTypes = {
+  logo: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  ownership: PropTypes.string.isRequired,
+  revenue: PropTypes.number.isRequired,
+  anTesting: PropTypes.string.isRequired,
+  anInfo: PropTypes.string.isRequired,
+  anScore: PropTypes.number.isRequired,
+  envInfo: PropTypes.string.isRequired,
+  envScore: PropTypes.number.isRequired,
+  labInfo: PropTypes.string.isRequired,
+  labScore: PropTypes.number.isRequired,
+  philDonate: PropTypes.string.isRequired,
+  philInfo: PropTypes.string.isRequired,
+  newsSource: PropTypes.string.isRequired,
+  newsHeadline: PropTypes.string.isRequired,
+  totalScore: PropTypes.number.isRequired,
+};

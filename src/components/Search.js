@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import "../styles/search.css";
 import getAllByName from "../requests/getAllByName";
 import SearchFooter from "./SearchFooter";
 
-// eslint-disable-next-line react/prop-types
 const Search = ({ searchText, setSearchText, onSubmit }) => {
   const [allBrandNames, setAllBrandNames] = useState([]);
   const [showList, setShowList] = useState(false);
@@ -73,3 +73,9 @@ const Search = ({ searchText, setSearchText, onSubmit }) => {
 };
 
 export default Search;
+
+Search.propTypes = {
+  searchText: PropTypes.string.isRequired,
+  setSearchText: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
