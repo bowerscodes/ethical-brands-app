@@ -19,11 +19,11 @@ Runs all test suites within this directory.
 ## Screenshots
 - Search/Landing Page
 
-![screenshot](/src/assets/search.png "Mobile view of search page")
+<img src="src/assets/search-page.png" width=35% height=35%>
 
 - Search Results Page
 
-![screenshot](/src/assets/search-results.png "Mobile view of search results page")
+<img src="src/assets/search-results.png" width=35% height=35%>
 
 ## Further Development
 
